@@ -29,7 +29,24 @@ h1, h4 {
 
 /* Header */
 header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1;
+      grid-template-rows: 1;
+  -ms-grid-columns: 10% 80% 10%;
+      grid-template-columns: 10% 80% 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
+}
+
+header h1 {
+  font-size: 2em;
+}
+
+header i {
+  font-size: 1.5em;
 }
 
 /* Footer */
@@ -62,4 +79,4 @@ footer li {
 .footer-icons {
   width: 30px;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=pages_style.css.map */
