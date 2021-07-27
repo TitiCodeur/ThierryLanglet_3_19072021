@@ -81,6 +81,7 @@ input::placeholder {
 
 main {
     text-align: center;
+    margin: auto;
 }
 
 /* Section 1 */
@@ -89,6 +90,14 @@ main {
     width: 95%;
     box-shadow: 0px 3px 5px rgb(192, 192, 192);
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fonction i {
+    width: 40px;
+    color:grey;
 }
 
 figure {
@@ -123,11 +132,14 @@ footer ul {
     padding-bottom: 30px;
 }
 
-footer li {
-    display: flex;
+li {
     margin-bottom: 5px;
 }
 
-.footer-icons {
-    width: 30px;
+footer p {
+    display: inline;
+}
+
+footer i {
+    width: 25px;
 }
