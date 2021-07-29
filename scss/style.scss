@@ -17,6 +17,7 @@ body {
     margin: 0;
     width: 100%;
     max-width: 768px;
+    font-size: 2em;
 }
 
 li {
@@ -30,13 +31,16 @@ a {
 
 h1, h4 {
     font-family: shrikhand, sans-serif;
-    margin-top: 0;
-    padding-top: 20px;
+    margin: 0;
+    padding: 20px 0 20px 0;
 }
 
 button {
-    height: 40px;
-    width: 180px;
+    font-family: roboto, sans-serif;
+    font-size:0.9em;
+
+    height: 85px;
+    width: 380px;
     background: linear-gradient(to bottom right, $couleur-secondaire, $couleur-primaire);
     border: none;
     border-radius: 120px;
@@ -50,14 +54,12 @@ header {
     text-align: center;
 }
 
-header p {
-    color: grey;
-}
-
 input {
     border: none;
     background-color: rgb(233, 233, 233);
-    width: auto;
+    width: 30%;
+    font-size: 1em;
+    margin-left: 20px;
 }
 
 input::placeholder {
@@ -66,11 +68,12 @@ input::placeholder {
 }
 
 .search_bar {
-    height: 50px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgb(233, 233, 233);
+    box-shadow: inset 6px 6px 6px rgb(192, 192, 192);
 }
 
 .search_bar i {
@@ -86,13 +89,31 @@ main {
 
 /* Section 1 */
 
+.section_1 {
+    background-color:rgb(248, 248, 248);
+    padding: 40px 40px 100px 40px;
+}
+
+.section_1 p {
+    color: grey;
+}
+
+/* Section 2 */
+
 .fonction {
-    width: 95%;
+    width: 90%;
+    background-color:rgb(248, 248, 248);
     box-shadow: 0px 3px 5px rgb(192, 192, 192);
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.fonction p {
+    font-weight: bold;
 }
 
 .fonction i {
@@ -100,10 +121,26 @@ main {
     color:grey;
 }
 
+.circle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 25px;
+	height: 25px;
+	border-radius: 200px;
+	background-color: $couleur-primaire;
+    color: white;
+	margin: 0 20px 0 -3px;
+}
+
+/* Section 3 */
+
 figure {
     width: 95%;
     box-shadow: 0px 0px 7px grey;
     border-radius: 20px;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 figure img {
