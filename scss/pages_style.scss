@@ -40,13 +40,16 @@ h1, h2, h4 {
 }
 
 button {
-    height: 40px;
-    width: 160px;
+    font-family: roboto, sans-serif;
+    font-size:0.9em;
+    height: 85px;
+    width: 380px;
     background: linear-gradient(to bottom right, $couleur-secondaire, $couleur-primaire);
     border: none;
     border-radius: 120px;
     box-shadow: 0px 0px 7px grey;
     color: white;
+    margin-bottom: 50px;
 }
 
 /* Header */
@@ -89,9 +92,78 @@ main {
 .bigbloc {
     width: 100%;
     border-radius: 50px 50px 0 0;
-    background-color: white;
+    background-color:rgb(248, 248, 248);
     position: relative;
     margin-top: -55px;
+}
+
+.bigbloc h3 {
+    text-align: left;
+    padding-left: 30px;
+    font-weight: normal;
+    margin: 70px 0 5px 0;
+}
+
+.trait_vert {
+    border-bottom: 6px solid $couleur-tertiaire;
+    width: 100px;
+    margin: 0 0 30px 30px;
+}
+
+.titres_pages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titres_pages h2 {
+    padding: 50px 0 0 30px;
+    font-size: 1.4em;
+}
+
+.titres_pages i {
+    font-size: 1.2em;
+    padding: 50px 50px 0 0;
+}
+
+/* Small Bloc */
+
+.smallbloc {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 50%;
+    height: 120px;
+    width: 95%;
+    background-color: white;
+    box-shadow: 0px 0px 15px rgb(214, 214, 214);
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.smallbloc h5 {
+    margin: 0;
+    padding: 20px 0 20px 20px;
+    font-size: 1em;
+}
+
+.smallbloc p {
+    margin: 0;
+    grid-column-start: 1;
+    padding: 5px 0 20px 20px;
+    font-size: 0.8em;
+}
+
+.smallbloc i {
+    display: none;
+}
+
+.price {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* Footer */
@@ -130,4 +202,16 @@ footer i {
 
 footer a:visited {
 	color: white;
+} 
+
+/* Version Tablette */
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Version Desktop */
+
+@media all and (min-width: 992px) {
+
 } 

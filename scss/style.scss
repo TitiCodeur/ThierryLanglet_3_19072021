@@ -182,9 +182,22 @@ main {
 }
 
 .photos_section_3 img {
+    position: relative;
     object-fit: cover; 
     height: 100%;
     width: 100%;
+}
+
+.new {
+    position: absolute;
+    margin-left: 450px;
+    margin-top: -250px;
+    color: rgb(14, 165, 140);
+    background-color: $couleur-tertiaire;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: 500;
+    padding: 10px 20px 10px 20px;
 }
 
 figcaption {
@@ -199,18 +212,6 @@ figcaption {
 
 figcaption h3, figcaption p {
     margin: 0;
-}
-
-.new {
-    position: absolute;
-    margin-left: 450px;
-    margin-top: -250px;
-    color: rgb(14, 165, 140);
-    background-color: $couleur-tertiaire;
-    border-radius: 5px;
-    font-size: 0.8em;
-    font-weight: 500;
-    padding: 10px 20px 10px 20px;
 }
 
 /* Footer */
@@ -249,4 +250,16 @@ footer i {
 
 footer a:visited {
 	color: white;
+} 
+
+/* Version Tablette */
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Version Desktop */
+
+@media all and (min-width: 992px) {
+
 } 
