@@ -434,4 +434,8 @@ footer a:visited {
   footer h4, ul {
     padding: 20px 0 0 0;
   }
+
+  footer p {
+    padding: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

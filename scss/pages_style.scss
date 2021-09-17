@@ -16,7 +16,6 @@ body {
     font-family: roboto, sans-serif;
     margin: 0;
     width: 100%;
-    max-width: 768px;
     font-size: 2em;
 }
 
@@ -208,10 +207,53 @@ footer a:visited {
 
 @media all and (min-width: 768px) and (max-width: 991px) {
 
+    footer {
+        text-align: center;
+    }
+
 }
 
 /* Version Desktop */
 
 @media all and (min-width: 992px) {
+
+    body {
+        font-size: 1em;
+    }
+
+    .titres_pages {
+        padding-bottom: 40px;
+    }
+
+    .bigbloc h3 {
+        margin: 0;
+    }
+
+    .middlebloc {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .smallbloc {
+        width: 30%;
+    }
+
+    button {
+        height: 40px;
+        width: 200px;
+        margin: 20px 0 40px 0;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer h4, ul {
+        padding: 20px 0 0 0;
+    }
+
+    footer p {
+        padding: 0;
+    }
 
 } 
