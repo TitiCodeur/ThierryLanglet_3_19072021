@@ -16,7 +16,10 @@
     width: 100%;
     height: 100%;
     z-index: 1;
+    /* 
     background: rgba(0, 0, 0, 0.3);
+    */
+    animation: loading_spinner 3s linear;
 }
 
 .loader {
@@ -50,6 +53,11 @@
 @keyframes spin {
     0% {transform: rotate(0deg)}
     100% {transform: rotate(360deg)}
+}
+
+@keyframes loading_spinner {
+    0% {background-color: red}
+    100% {display: none}
 }
 
 * {
@@ -172,13 +180,14 @@ main {
 
 .fonction p {
     font-weight: bold;
+    font-size: 2em;
 }
 
 .fonction i {
     width: 40px;
     color:grey;
     padding: 0 80px 0 40px;
-    font-size: 1.2em;
+    font-size: 2em;
 }
 
 .circle {
@@ -191,6 +200,7 @@ main {
 	background-color: $couleur-primaire;
     color: white;
     margin-left: -27px;
+    font-size: 2em;
 }
 
 /* Section 3 */
@@ -234,7 +244,7 @@ main {
 
 .new {
     position: absolute;
-    margin-left: 500px;
+    margin-right: 20px;
     margin-top: 50px;
     color: rgb(14, 165, 140);
     background-color: $couleur-tertiaire;
@@ -424,12 +434,18 @@ footer a:visited {
 
     .fonction i {
         padding: 0;
+        font-size: 1.2em;
+    }
+
+    .fonction p {
+        font-size: 1.2em;
     }
 
     .circle {
         height: 30px;
         width: 30px;
         margin-left: -15px;
+        font-size:1.2em;
     }
 
     .fonction:hover {
