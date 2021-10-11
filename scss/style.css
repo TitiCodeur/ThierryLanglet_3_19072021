@@ -39,6 +39,9 @@
   border-top-color: #FF79DA;
   -webkit-animation: spin 1s linear infinite;
           animation: spin 1s linear infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 10000;
 }
 
 .chargement {
@@ -60,6 +63,28 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+.loading_spinner::after {
+  -webkit-animation: stop 1s;
+          animation: stop 1s;
+}
+
+@-webkit-keyframes stop {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes stop {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 * {
@@ -183,6 +208,7 @@ main {
   justify-content: start;
   align-items: center;
   margin: 0 0 40px 60px;
+  font-size: 1em;
 }
 
 .fonction p {
@@ -193,7 +219,6 @@ main {
   width: 40px;
   color: grey;
   padding: 0 80px 0 40px;
-  font-size: 1.2em;
 }
 
 .circle {
@@ -249,8 +274,8 @@ main {
 
 .new {
   position: absolute;
-  margin-left: 500px;
-  margin-top: 50px;
+  right: 20px;
+  top: 20px;
   color: #0ea58c;
   background-color: #99E2D0;
   border-radius: 5px;
@@ -354,11 +379,6 @@ footer a:visited {
     grid-row-start: 3;
   }
 
-  .new {
-    margin-left: 200px;
-    margin-top: 30px;
-  }
-
   footer {
     text-align: center;
   }
@@ -366,6 +386,7 @@ footer a:visited {
 /* Version Desktop */
 @media all and (min-width: 992px) {
   body {
+    max-width: 1440px;
     font-size: 1em;
   }
 
@@ -487,11 +508,6 @@ footer a:visited {
   .grid_4 {
     grid-column-start: 4;
     grid-row-start: 2;
-  }
-
-  .new {
-    margin-left: 200px;
-    margin-top: 30px;
   }
 
   footer {
