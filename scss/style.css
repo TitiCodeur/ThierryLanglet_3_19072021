@@ -5,17 +5,18 @@
 /* Code CSS */
 /*----------*/
 /* Propriétés Générales */
-.loading_spinner {
+#loading_spinner {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
   width: 100%;
   height: 100%;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.3);
-  -webkit-animation: loading_spinner 3s linear;
-          animation: loading_spinner 3s linear;
+  -webkit-animation: disappear 3s;
+          animation: disappear 3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  position: fixed;
 }
 
 .loader {
@@ -50,6 +51,13 @@
   padding-left: 20px;
 }
 
+#site {
+  -webkit-animation: appear 3s;
+          animation: appear 3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
 @-webkit-keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -67,42 +75,42 @@
     transform: rotate(360deg);
   }
 }
-.loading_spinner::after {
-  -webkit-animation: stop 1s;
-          animation: stop 1s;
-}
-
-@-webkit-keyframes stop {
+@-webkit-keyframes disappear {
   0% {
+    opacity: 1;
+  }
+  50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
   }
 }
-
-@keyframes stop {
+@keyframes disappear {
   0% {
+    opacity: 1;
+  }
+  50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
   }
 }
-@-webkit-keyframes loading_spinner {
+@-webkit-keyframes appear {
   0% {
-    background-color: red;
+    opacity: 0.5;
   }
   100% {
-    display: none;
+    opacity: 1;
   }
 }
-@keyframes loading_spinner {
+@keyframes appear {
   0% {
-    background-color: red;
+    opacity: 0.5;
   }
   100% {
-    display: none;
+    opacity: 1;
   }
 }
 * {
@@ -128,7 +136,8 @@ a:visited {
   color: black;
 }
 
-h1, h4 {
+h1,
+h4 {
   font-family: shrikhand, sans-serif;
   margin: 0;
   padding: 20px 0 20px 0;
@@ -312,7 +321,8 @@ figcaption {
   font-size: 0.9em;
 }
 
-figcaption h3, figcaption p {
+figcaption h3,
+figcaption p {
   margin: 0;
 }
 
@@ -331,7 +341,8 @@ footer h4 {
   padding: 30px 0 30px 40px;
 }
 
-footer i, footer a {
+footer i,
+footer a {
   color: white;
 }
 
@@ -538,7 +549,8 @@ footer a:visited {
     text-align: center;
   }
 
-  footer h4, ul {
+  footer h4,
+ul {
     padding: 20px 0 0 0;
   }
 
